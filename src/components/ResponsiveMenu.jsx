@@ -19,7 +19,7 @@ const ResponsiveMenu = ({showMenu, setShowMenu}) => {
                 <a href='#education'><li className='cursor-pointer' onClick={()=>setShowMenu(false)}>Education & Experience</li></a>
                 <a href='#project'><li className='cursor-pointer' onClick={()=>setShowMenu(false)}>Projects</li></a>
                 {/* <a href='#contact'><li className='cursor-pointer' onClick={()=>setShowMenu(false)}>Contact</li></a> */}
-                <a href='#contact'><button className='px-3 py-1 cursor-pointer rounded-md bg-blue-500 text-white flex items-center gap-1 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#33CCCC,0_0_15px_#33CCCC,0_0_30px_#33CCCC] shadow-blue-500 border-blue-400 border-2'>Contact<FaChevronRight /></button></a>
+                <a href='#contact' onClick={() => setShowMenu(false)}><button className='px-3 py-1 cursor-pointer rounded-md bg-blue-500 text-white flex items-center gap-1 shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#33CCCC,0_0_15px_#33CCCC,0_0_30px_#33CCCC] shadow-blue-500 border-blue-400 border-2'>Contact<FaChevronRight /></button></a>
             </ul>
         </nav>
      </div>
