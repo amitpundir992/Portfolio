@@ -15,8 +15,17 @@ const About = () => {
             </div>
             {/* paragraph section */}
             <div className='p-5 md:p-10 bg-gray-950 rounded-md shadow-[0px_0px_20px_10px_rgba(0,0,0,0.3)] shadow-blue-500'>
-                <p className='text-lg leading-7 mb-6'>Hi! I'm Amit Pundir, a passionate Full-Stack Developer with expertise in the MERN stack. With a strong foundation in modern web development and an eye for detail, I create elegant, userfriendly web solutions tailored to meet client needs.</p>
-                <p className='text-lg leading-7 mb-6'>With a solid understanding of both front-end and back-end technologies, I specialize in building scalable, high-performance, and visually appealing applications. Constantly learning and adapting to new technologies, I am committed to staying ahead in the ever-evolving tech landscape. Beyond coding, I enjoy collaborating with teams and sharing knowledge.</p>
+               <p className='text-lg leading-7 mb-1'>
+Hi! I'm Amit Pundir, a Full-Stack Developer with hands-on experience in building scalable web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). I specialize in backend development, REST API design, and real-time systems.
+</p>
+
+<p className='text-lg leading-7 mb-1'>
+Currently working as a Software Developer at Aucourant Technologies, I develop SaaS-based applications with role-based access control (RBAC), real-time camera streaming using WebSockets and FFmpeg, and secure subscription-based systems. I focus on writing clean, modular, and high-performance code to build reliable and scalable systems.
+</p>
+
+<p className='text-lg leading-7 mb-6'>
+I have experience working on real-time video processing platforms, payment gateway integrations, and complete end-to-end application architecture. Passionate about problem-solving and continuous learning, I enjoy building impactful products and collaborating in fast-paced development environments.
+</p>
                 <div className='mt-5'>
                     <h1 className='font-bold text-2xl mb-5 text-blue-400'>My Skills</h1>
                     <div className='flex flex-wrap gap-4 mb-5 text-sm'>
@@ -26,11 +35,13 @@ const About = () => {
                         <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>React</p>
                         <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>Node.js</p>
                         <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>ExpressJs</p>
-                        <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>SQL</p>
+                        <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>My SQL</p>
                         <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>MongoDB</p>
+                        <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>Nextjs</p>
+                        <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>Tailwind Css</p>
                         <p className='bg-gray-900 cursor-pointer text-gray-300 px-2 py-1 rounded- full'>Git</p>
                     </div>
-                <button className='px-3 py-1 rounded-md bg-blue-500 text-white flex items-center gap-1'>Contact<FaChevronRight /></button>
+                <a href='#contact'><button className='px-3 py-1 rounded-md bg-blue-500 text-white flex items-center gap-1'>Contact<FaChevronRight/></button></a>
                 </div>
             </div>
         </div>

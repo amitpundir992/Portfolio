@@ -12,26 +12,28 @@ const education = [
       degree: "Bachelor In Computer Applications(BCA)",
       institution: "Graphic Era Hill University",
       year: "2018-2021",
-      description: "Graduated with a Degree",
+      description: "Focused on advanced software development, system design, and scalable application architecture, strengthening problem-solving and analytical skills.",
       icon: "🎓",
     },
   ];
 
   const experience = [
     {
-      role: "Software Developer (Intern)",
-      company: "Cynoteck",
-      year: "Oct,2024 - Present",
-      description: "Learning New Things",
-      icon: "💼",
-    },
-    {
-      role: "MERN Stack Developer (Intership)",
-      company: "Brillica Service",
-      year: "NOV,2023 - Apr,2024 ",
-      description: "Developed and optimized MERN stack applications, enhancing user experience.",
+        
+      role: "Software Developer",
+      company: "Aucourant Technologies Private LTD",
+      year: "Jul,2025 - present ",
+      description: "Built scalable SaaS backend systems with RBAC, real-time camera streaming using WebSockets & FFmpeg, and secure REST APIs with subscription-based access. Focused on performance optimization and modular architecture.",
       icon: "💻",
     },
+    {
+      role: "Software Developer (Intern)",
+      company: "Cynoteck",
+      year: "Oct,2024 - Apr,2025",
+      description: "Gained hands-on experience in full-stack development using MERN stack. Worked on building REST APIs, improving backend logic, and understanding scalable application architecture while collaborating in a professional development environment.",
+      icon: "💼",
+    }
+  
   ];
 
 const Education = () => {
