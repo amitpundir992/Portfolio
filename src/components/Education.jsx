@@ -27,9 +27,9 @@ const experience = [
     icon: "💻",
   },
   {
-    role: "Software Developer (Intern)",
+    role: "Software Developer",
     company: "Cynoteck",
-    year: "Oct, 2024 – Apr, 2025",
+    year: "Oct, 2024 – Jun, 2025",
     description: "Gained hands-on experience in full-stack development using MERN stack. Worked on building REST APIs, improving backend logic, and understanding scalable application architecture while collaborating in a professional development environment.",
     icon: "💼",
   },
