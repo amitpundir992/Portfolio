@@ -1,6 +1,6 @@
 import React from 'react'
-import Atech from '../assets/Atech.png'
 import Creche from '../assets/Creche.jpg'
+import examora from '../assets/examora.png'
 import Farm from '../assets/Farm.jpg'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import useInView from '../hooks/useInView';
@@ -11,10 +11,20 @@ const projects = [
     description:
       "Built a scalable SaaS-based platform for real-time creche monitoring using live camera feeds. Implemented WebSockets for live streaming, FFmpeg for video processing, and RBAC for secure multi-user access. Integrated Razorpay for subscription-based payments, along with audit logs and support ticket system.",
     techStack: ["React", "Node.js", "Express.js", "MongoDB", "WebSockets", "FFmpeg", "Razorpay"],
-    link: null,
-    github: null,
-    status: "In Progress 🚧",
+    link: "https://smart-surveillance-ai.vercel.app/",
+    github: "https://github.com/amitpundir992/Smart-Surveillance-AI",
+    status: "Live ✅",
     image: Creche,
+  },
+  {
+    title: "Examora",
+    description:
+      "Examora is an AI-powered exam generation platform that transforms PDF documents into structured quizzes, MCQs, and assessments. Built with Next.js, TypeScript, Prisma, PostgreSQL, and AI-powered question extraction.",
+    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "AI"],
+    link: "https://examora-three.vercel.app/",
+    github: "https://github.com/amitpundir992/Examora",
+    status: "Live ✅",
+    image: examora,
   },
   {
     title: "Farm Management System",
@@ -25,16 +35,6 @@ const projects = [
     github: null,
     status: "In Progress 🚧",
     image: Farm,
-  },
-  {
-    title: "Aucourant Technologies CMS",
-    description:
-      "Worked on a fully dynamic CMS platform powering the Aucourant Technologies website. Built scalable backend APIs, modular architecture, and dynamic content management features to handle real-time updates and admin-controlled website data.",
-    techStack: ["Node.js", "Express.js", "MongoDB", "REST APIs"],
-    link: "https://aucouranttechnologies.com/",
-    github: null,
-    status: "Live ✅",
-    image: Atech,
   },
 ];
 

@@ -50,6 +50,7 @@ const stats = [
 
 const skills = [
   { name: 'JavaScript',   color: 'border-yellow-400/50 text-yellow-400 hover:bg-yellow-400/10' },
+  { name: 'Typescript',   color: 'border-teal-400/50 text-teal-400 hover:bg-teal-400/10' },
   { name: 'Python',       color: 'border-blue-300/50   text-blue-300   hover:bg-blue-300/10'   },
   { name: 'React.js',     color: 'border-cyan-400/50   text-cyan-400   hover:bg-cyan-400/10'   },
   { name: 'Node.js',      color: 'border-green-400/50  text-green-400  hover:bg-green-400/10'  },
