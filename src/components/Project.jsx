@@ -1,7 +1,7 @@
 import React from 'react'
 import Creche from '../assets/Creche.jpg'
 import examora from '../assets/examora.png'
-import Farm from '../assets/Farm.jpg'
+import Jobtourer from '../assets/Jobtourer.png'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import useInView from '../hooks/useInView';
 
@@ -27,14 +27,14 @@ const projects = [
     image: examora,
   },
   {
-    title: "Farm Management System",
+    title: "JobTourer",
     description:
-      "Developing a full-stack system to manage agricultural operations, track resources, and monitor farm activities. Focused on scalable backend architecture, efficient data handling, and real-time insights for improved decision-making.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "i18n"],
-    link: null,
-    github: null,
-    status: "In Progress 🚧",
-    image: Farm,
+      "JobTourer is a job discovery and application workflow platform that finds relevant opportunities, matches them with a candidate's profile and resume, and ranks recommendations by match score. It also tracks applications and creates personalized, reviewable Gmail drafts for suitable jobs.",
+    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Trigger.dev", "Gmail API"],
+    link: "https://jobtourer.vercel.app/",
+    github: "https://github.com/amitpundir992/Jobtourer",
+    status: "Live ✅",
+    image: Jobtourer,
   },
 ];
 
