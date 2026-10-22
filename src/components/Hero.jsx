@@ -3,7 +3,7 @@ import { LuDownload } from "react-icons/lu";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Profile from "../assets/profile.jpg";
 
-const TEXTS = ["Full-Stack Developer", "MERN Stack Enthusiast", "Backend Engineer"];
+const TEXTS = ["Full-Stack Engineer", "MERN Stack Enthusiast", "Backend Engineer"];
 
 const Hero = () => {
   const [textIdx, setTextIdx] = useState(0);
@@ -63,10 +63,9 @@ const Hero = () => {
           </div>
 
           <p className="lg:w-[560px] text-sm text-gray-400 leading-relaxed">
-            I am a passionate and dedicated full-stack developer with a strong
-            focus on the MERN (MongoDB, Express.js, React, Node.js) stack.
-            Constantly learning and adapting to new technologies, I am committed
-            to staying ahead in the ever-evolving tech landscape.
+            Full-stack engineer building production SaaS platforms and AI-powered systems. I ship scalable applications with TypeScript,
+  React, Next.js, Node.js, and PostgreSQL—from real-time video processing to intelligent automation. Focused on performance, clean architecture, and solving complex
+  problems with elegant code..
           </p>
 
           <div className="flex flex-wrap gap-4 items-center pt-2">

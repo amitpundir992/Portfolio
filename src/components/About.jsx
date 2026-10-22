@@ -42,8 +42,8 @@ const expertise = [
 ];
 
 const stats = [
-  { value: '1.5+', label: 'Years Experience' },
-  { value: '4+',   label: 'Projects Shipped'  },
+  { value: '2+', label: 'Years Experience' },
+  { value: '6+',   label: 'Projects Shipped'  },
   { value: '15+',  label: 'Technologies'       },
   { value: '2',    label: 'AI Systems Built'   },
 ];
@@ -101,15 +101,20 @@ const About = () => {
           >
             {/* Tag */}
             <div className='inline-flex items-center gap-2 w-fit bg-blue-500/10 border border-blue-500/25 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase'>
-              Backend Engineer · AI & Real-Time Systems
+              Full-Stack Engineer · AI & Real-Time Systems
             </div>
 
             {/* Bio */}
             <div className='space-y-4 text-gray-300 text-[15px] leading-8'>
               <p>
-                I'm <span className='text-white font-semibold'>Amit Pundir</span> — a Backend Engineer
+                I'm <span className='text-white font-semibold'>Amit Pundir</span> — a Full-Stack Engineer
                 specializing in building <span className='text-blue-400 font-medium'>scalable real-time SaaS platforms
-                and AI-powered systems</span> using Node.js, Python, FastAPI, React.js, MongoDB, Redis, and RabbitMQ.
+                and AI-powered systems</span> using Node.js, Python, FastAPI, React.js, TypeScript, PostgreSQL, MongoDB, Redis, and RabbitMQ.
+              </p>
+              <p>
+                I've delivered measurable results: <span className='text-green-400 font-medium'>optimized API latency by 35%</span>, 
+                built systems processing <span className='text-purple-400 font-medium'>20+ concurrent video streams with sub-200ms 
+                detection latency</span>, and architected platforms serving users across multi-tenant SaaS environments.
               </p>
               <p>
                 I've architected distributed backends supporting <span className='text-purple-400 font-medium'>live
@@ -117,10 +122,18 @@ const About = () => {
                 communication, RBAC multi-tenant systems, and payment infrastructure with Razorpay.
               </p>
               <p>
-                Currently at <span className='text-green-400 font-medium'>Aucourant Technologies</span>, I build
-                AI-integrated real-time monitoring systems — from video ingestion pipelines to distributed async
-                workflows with Redis &amp; RabbitMQ — with a strong focus on <span className='text-white font-medium'>
-                scalability, clean architecture, and performance</span>.
+                Beyond backend systems, I build complete products: <span className='text-cyan-400 font-medium'>Jobtourer</span> (AI 
+                job automation with resume matching), <span className='text-cyan-400 font-medium'>Examora</span> (OCR + AI-powered 
+                exam platform), and <span className='text-cyan-400 font-medium'>Creche Management</span> (live CCTV monitoring with 
+                YOLO/ArcFace). I work across the full stack — from React/Next.js interfaces to Python FastAPI microservices — 
+                with a focus on <span className='text-white font-medium'>clean architecture, TypeScript-first development, 
+                and production readiness</span>.
+              </p>
+              <p>
+                Currently at <span className='text-green-400 font-medium'>Aucourant Technologies</span>, I architect 
+                production-grade AI monitoring systems — from video ingestion pipelines and distributed async
+                workflows (Redis &amp; RabbitMQ) to RBAC systems, subscription billing, and performance-critical APIs
+                — with a strong focus on <span className='text-white font-medium'>scalability, clean architecture, and performance</span>.
               </p>
             </div>
 
