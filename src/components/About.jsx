@@ -10,7 +10,7 @@ const expertise = [
     color:  'text-purple-400',
     border: 'border-purple-500/25',
     bg:     'bg-purple-500/8',
-    glow:   'hover:shadow-purple-500/10',
+    glow:   'hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]',
   },
   {
     icon: <FaWifi />,
@@ -19,7 +19,7 @@ const expertise = [
     color:  'text-yellow-400',
     border: 'border-yellow-500/25',
     bg:     'bg-yellow-500/8',
-    glow:   'hover:shadow-yellow-500/10',
+    glow:   'hover:shadow-[0_8px_30px_rgba(234,179,8,0.15)]',
   },
   {
     icon: <FaCubes />,
@@ -28,7 +28,7 @@ const expertise = [
     color:  'text-cyan-400',
     border: 'border-cyan-500/25',
     bg:     'bg-cyan-500/8',
-    glow:   'hover:shadow-cyan-500/10',
+    glow:   'hover:shadow-[0_8px_30px_rgba(6,182,212,0.15)]',
   },
   {
     icon: <FaServer />,
@@ -37,7 +37,7 @@ const expertise = [
     color:  'text-green-400',
     border: 'border-green-500/25',
     bg:     'bg-green-500/8',
-    glow:   'hover:shadow-green-500/10',
+    glow:   'hover:shadow-[0_8px_30px_rgba(34,197,94,0.15)]',
   },
 ];
 
@@ -74,38 +74,42 @@ const About = () => {
   const [skillsRef, skillsVisible] = useInView();
 
   return (
-    <div id='about' className='py-24 bg-gray-900 text-gray-300 relative overflow-hidden'>
+    <section id='about' className='section-padding bg-[#0a0a0f] text-gray-300 relative overflow-hidden'>
 
-      {/* Ambient glow */}
-      <div className="absolute right-0 top-10 w-80 h-80 bg-purple-600/6 rounded-full filter blur-[100px] pointer-events-none" />
-      <div className="absolute left-0 bottom-10 w-72 h-72 bg-blue-600/6 rounded-full filter blur-[100px] pointer-events-none" />
+      {/* Ambient aurora glow */}
+      <div className="absolute right-0 top-20 w-[600px] h-[600px] bg-purple-600/10 rounded-full filter blur-[120px] pointer-events-none animate-glow-pulse" />
+      <div className="absolute left-0 bottom-20 w-[500px] h-[500px] bg-blue-600/8 rounded-full filter blur-[120px] pointer-events-none animate-glow-pulse" style={{ animationDelay: '1s' }} />
 
-      <div className='max-w-7xl mx-auto px-4'>
+      <div className='container-custom'>
 
-        {/* ── Section heading ── */}
+        {/* ── Section Heading ── */}
         <div
           ref={titleRef}
-          className={`text-center mb-14 ${titleVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
+          className={`text-center mb-16 ${titleVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
         >
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>About Me</h2>
-          <div className='w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full' />
+          <h2 className='text-4xl sm:text-5xl md:text-6xl font-bold font-heading text-white mb-4'>
+            About <span className="gradient-text">Me</span>
+          </h2>
+          <div className='w-24 h-1.5 bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-500 mx-auto rounded-full' />
         </div>
 
-        {/* ── Main two-column ── */}
-        <div className='grid lg:grid-cols-2 gap-10 mb-10'>
+        {/* ── Main Two-Column Layout ── */}
+        <div className='grid lg:grid-cols-2 gap-12 mb-12'>
 
-          {/* LEFT — bio + stats */}
+          {/* LEFT — Bio + Stats */}
           <div
             ref={leftRef}
             className={`flex flex-col gap-6 ${leftVisible ? 'animate-fadeInLeft' : 'opacity-0'}`}
           >
             {/* Tag */}
-            <div className='inline-flex items-center gap-2 w-fit bg-blue-500/10 border border-blue-500/25 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase'>
-              Full-Stack Engineer · AI & Real-Time Systems
+            <div className='inline-flex items-center gap-2 w-fit glass-card px-4 py-2 rounded-full text-xs font-semibold tracking-wide uppercase border-blue-500/20'>
+              <span className="text-blue-400">Full-Stack Engineer</span>
+              <span className="text-gray-600">·</span>
+              <span className="text-cyan-400">AI & Real-Time Systems</span>
             </div>
 
-            {/* Bio */}
-            <div className='space-y-4 text-gray-300 text-[15px] leading-8'>
+            {/* Bio Text */}
+            <div className='space-y-5 text-gray-300 text-[15px] sm:text-base leading-relaxed'>
               <p>
                 I'm <span className='text-white font-semibold'>Amit Pundir</span> — a Full-Stack Engineer
                 specializing in building <span className='text-blue-400 font-medium'>scalable real-time SaaS platforms
@@ -137,59 +141,59 @@ const About = () => {
               </p>
             </div>
 
-            {/* Stats strip */}
-            <div className='grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2'>
+            {/* Stats Grid */}
+            <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 pt-3'>
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className='flex flex-col items-center justify-center p-3 bg-gray-950/70 rounded-xl border border-gray-800/50 hover:border-blue-500/30 transition-all hover:-translate-y-0.5 duration-200'
+                  className='glass-card glass-card-hover flex flex-col items-center justify-center p-4 rounded-2xl border-blue-500/10 bg-blue-500/5 hover:bg-blue-500/10'
                 >
-                  <span className='text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
+                  <span className='text-3xl font-extrabold gradient-text'>
                     {s.value}
                   </span>
-                  <span className='text-gray-500 text-xs mt-0.5 text-center leading-tight'>{s.label}</span>
+                  <span className='text-gray-500 text-xs mt-1 text-center leading-tight font-medium'>{s.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT — expertise cards */}
+          {/* RIGHT — Expertise Cards */}
           <div
             ref={rightRef}
-            className={`grid grid-cols-1 sm:grid-cols-2 gap-4 content-start ${rightVisible ? 'animate-fadeInRight' : 'opacity-0'}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-5 content-start ${rightVisible ? 'animate-fadeInRight' : 'opacity-0'}`}
           >
             {expertise.map((e, i) => (
               <div
                 key={i}
-                className={`p-5 rounded-2xl border ${e.border} ${e.bg} hover:shadow-lg ${e.glow} hover:-translate-y-1 transition-all duration-300`}
+                className={`glass-card glass-card-hover p-6 rounded-2xl border ${e.border} ${e.bg} ${e.glow} backdrop-blur-xl`}
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className={`text-2xl mb-3 ${e.color}`}>{e.icon}</div>
-                <h4 className={`font-bold text-sm mb-1 ${e.color}`}>{e.label}</h4>
-                <p className='text-gray-500 text-xs leading-relaxed'>{e.desc}</p>
+                <div className={`text-3xl mb-4 ${e.color}`}>{e.icon}</div>
+                <h4 className={`font-bold text-base mb-2 ${e.color} font-heading`}>{e.label}</h4>
+                <p className='text-gray-400 text-sm leading-relaxed'>{e.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ── Skills + CTA ── */}
+        {/* ── Skills Section ── */}
         <div
           ref={skillsRef}
-          className={`p-7 bg-gray-950/70 rounded-2xl border border-gray-800/50 ${skillsVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
+          className={`glass-card p-8 rounded-2xl border-blue-500/20 bg-blue-500/5 backdrop-blur-xl ${skillsVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
         >
-          <div className='flex flex-wrap items-center justify-between gap-4 mb-5'>
-            <h3 className='font-bold text-lg text-blue-400'>Technical Skills</h3>
+          <div className='flex flex-wrap items-center justify-between gap-5 mb-6'>
+            <h3 className='font-bold font-heading text-xl sm:text-2xl gradient-text'>Technical Skills</h3>
             <a href='#contact'>
-              <button className='btn-glow px-5 py-2 rounded-lg bg-blue-500 text-white flex items-center gap-2 border border-blue-400/50 text-sm font-semibold hover:bg-blue-600 transition-colors'>
+              <button className='btn-glow px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white flex items-center gap-2 text-sm font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all shadow-[0_0_20px_rgba(59,130,246,0.3)] focus-ring'>
                 Contact Me <FaChevronRight className='text-xs' />
               </button>
             </a>
           </div>
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex flex-wrap gap-3'>
             {skills.map((skill, idx) => (
               <span
                 key={idx}
-                className={`skill-tag bg-gray-900/80 border ${skill.color} px-3 py-1.5 rounded-lg text-sm font-medium cursor-default`}
+                className={`skill-tag glass-card border ${skill.color} px-4 py-2 rounded-xl text-sm font-medium cursor-default backdrop-blur-sm`}
               >
                 {skill.name}
               </span>
@@ -198,7 +202,7 @@ const About = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }
 
