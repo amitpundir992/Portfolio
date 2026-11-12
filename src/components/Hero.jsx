@@ -31,59 +31,63 @@ const Hero = () => {
   }, [charIdx, deleting, textIdx]);
 
   return (
-    <section className="min-h-screen hero-bg grid-pattern text-white flex flex-col justify-center items-center relative overflow-hidden pb-10 pt-20">
+    <section id="hero" className="min-h-screen hero-bg grid-pattern noise-texture text-white flex flex-col justify-center items-center relative overflow-hidden pb-10 pt-24 md:pt-28">
 
-      {/* Ambient blobs */}
-      <div className="absolute top-24 left-[5%] w-72 h-72 bg-blue-600 rounded-full filter blur-[120px] opacity-20 animate-blob pointer-events-none" />
-      <div className="absolute bottom-16 right-[8%] w-96 h-96 bg-purple-700 rounded-full filter blur-[130px] opacity-10 animate-blob pointer-events-none" style={{ animationDelay: "3s" }} />
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-cyan-600 rounded-full filter blur-[100px] opacity-10 animate-blob pointer-events-none" style={{ animationDelay: "6s" }} />
+      {/* Animated aurora glow blobs */}
+      <div className="absolute top-20 left-[10%] w-[500px] h-[500px] bg-violet-600/20 rounded-full filter blur-[120px] opacity-30 animate-blob pointer-events-none" />
+      <div className="absolute bottom-10 right-[5%] w-[600px] h-[600px] bg-blue-600/15 rounded-full filter blur-[140px] opacity-25 animate-blob pointer-events-none" style={{ animationDelay: "4s" }} />
+      <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] bg-cyan-600/10 rounded-full filter blur-[100px] opacity-20 animate-blob pointer-events-none" style={{ animationDelay: "7s" }} />
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20 justify-between px-4 w-full">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-20 justify-between px-6 w-full relative z-10">
 
-        {/* ── Text block ── */}
-        <div className="space-y-5 animate-fadeInLeft">
+        {/* ── Text Content ── */}
+        <div className="space-y-6 animate-fadeInLeft flex-1">
 
-          {/* Available badge */}
-          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-medium w-fit">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Available for Work
+          {/* Available for work badge */}
+          <div className="inline-flex items-center gap-2.5 glass-card px-4 py-2 rounded-full text-sm font-medium w-fit border-green-500/20 bg-green-500/5">
+            <span className="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
+            <span className="text-green-400">Available for Work</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          {/* Main Heading with Gradient */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.1] tracking-tight">
             Hi👋, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="gradient-text gradient-text-animated inline-block">
               Amit Pundir
             </span>
           </h1>
 
-          {/* Typewriter */}
-          <div className="md:text-2xl text-lg font-medium text-gray-300 min-h-[2rem] flex items-center gap-0.5">
-            <span>{displayText}</span>
-            <span className="animate-blink text-blue-400 font-thin">|</span>
+          {/* Typewriter Effect */}
+          <div className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-300 min-h-[2.5rem] flex items-center gap-1">
+            <span className="text-balance">{displayText}</span>
+            <span className="animate-blink text-cyan-400 font-thin text-2xl">|</span>
           </div>
 
-          <p className="lg:w-[560px] text-sm text-gray-400 leading-relaxed">
+          {/* Description */}
+          <p className="max-w-2xl text-base sm:text-lg text-gray-400 leading-relaxed text-balance">
             Full-stack engineer building production SaaS platforms and AI-powered systems. I ship scalable applications with TypeScript,
-  React, Next.js, Node.js, and PostgreSQL—from real-time video processing to intelligent automation. Focused on performance, clean architecture, and solving complex
-  problems with elegant code..
+            React, Next.js, Node.js, and PostgreSQL—from real-time video processing to intelligent automation. Focused on performance, clean architecture, and solving complex
+            problems with elegant code.
           </p>
 
+          {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 items-center pt-2">
             <a
               href="/Amit_Pundir_Resume.pdf"
               download="Amit_Pundir_Resume.pdf"
-              className="btn-glow px-6 py-3 flex items-center gap-2 bg-blue-500 rounded-lg text-white hover:bg-blue-600 border border-blue-400/50 font-medium transition-colors"
+              className="btn-glow group px-6 py-3.5 flex items-center gap-2.5 bg-gradient-to-r from-blue-500 via-blue-600 to-cyan-500 rounded-2xl text-white hover:from-blue-600 hover:to-cyan-600 font-semibold transition-all shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] focus-ring"
             >
-              <LuDownload className="w-5 h-5" />
+              <LuDownload className="w-5 h-5 group-hover:animate-bounce" />
               Download CV
             </a>
 
-            <div className="flex gap-4 text-3xl">
+            <div className="flex gap-3 text-3xl">
               <a
                 href="https://www.linkedin.com/in/amitpundir01/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 hover:scale-125 transition-all duration-300"
+                aria-label="LinkedIn Profile"
+                className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/30 hover:scale-110 transition-all duration-300 focus-ring"
               >
                 <FaLinkedin />
               </a>
@@ -91,7 +95,8 @@ const Hero = () => {
                 href="https://github.com/amitpundir992"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white hover:scale-125 transition-all duration-300"
+                aria-label="GitHub Profile"
+                className="w-12 h-12 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/30 hover:scale-110 transition-all duration-300 focus-ring"
               >
                 <FaGithub />
               </a>
@@ -99,23 +104,35 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* ── Profile image ── */}
-        <div className="relative animate-fadeInRight flex-shrink-0" style={{ animationDelay: "0.2s" }}>
-          {/* Spinning rings */}
-          <div className="absolute inset-[-18px] rounded-full border border-blue-500/20 animate-spin-slow pointer-events-none" />
-          <div className="absolute inset-[-9px] rounded-full border-2 border-dashed border-blue-400/25 animate-spin-reverse pointer-events-none" />
+        {/* ── Profile Image with Glow Effect ── */}
+        <div className="relative animate-fadeInRight flex-shrink-0 delay-200">
+          {/* Animated gradient ring */}
+          <div className="absolute inset-[-20px] rounded-full bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-500 opacity-40 blur-2xl animate-spin-slow pointer-events-none" />
+          
+          {/* Spinning decorative rings */}
+          <div className="absolute inset-[-18px] rounded-full border-2 border-blue-500/20 animate-spin-slow pointer-events-none" />
+          <div className="absolute inset-[-10px] rounded-full border-2 border-dashed border-violet-400/20 animate-spin-reverse pointer-events-none" />
 
-          {/* Glow backdrop */}
-          <div className="absolute inset-0 rounded-full bg-blue-500/20 filter blur-3xl scale-110 pointer-events-none" />
-
-          <img
-            src={Profile}
-            alt="profile img"
-            className="relative rounded-full border-2 border-blue-500 md:w-[380px] w-[270px] animate-float shadow-[0_0_60px_rgba(59,130,246,0.35)]"
-          />
+          {/* Main profile image */}
+          <div className="relative">
+            <img
+              src={Profile}
+              alt="Amit Pundir - Full-Stack Engineer"
+              className="relative rounded-full border-4 border-blue-500/30 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px] animate-float shadow-[0_0_80px_rgba(59,130,246,0.4)] hover:shadow-[0_0_100px_rgba(59,130,246,0.6)] transition-shadow duration-500"
+              loading="eager"
+            />
+            {/* Inner glow */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-500/10 via-transparent to-violet-500/10 pointer-events-none" />
+          </div>
         </div>
       </div>
 
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+        <div className="w-6 h-10 rounded-full border-2 border-gray-600 flex justify-center p-1">
+          <div className="w-1.5 h-2 bg-gradient-to-b from-blue-400 to-cyan-400 rounded-full animate-pulse" />
+        </div>
+      </div>
     </section>
   );
 };
