@@ -42,24 +42,24 @@ const TimelineCard = ({ item, index, animClass }) => {
   return (
     <div
       ref={ref}
-      className={`relative pl-10 mb-7 ${visible ? animClass : 'opacity-0'}`}
+      className={`relative pl-10 mb-8 ${visible ? animClass : 'opacity-0'}`}
       style={{ animationDelay: `${index * 0.15}s` }}
     >
-      {/* Dot */}
-      <div className='absolute left-[-1px] top-5 w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-950 shadow-[0_0_10px_rgba(59,130,246,0.6)] z-10' />
+      {/* Glowing Dot */}
+      <div className='absolute left-[-1px] top-6 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 border-4 border-[#0a0a0f] shadow-[0_0_12px_rgba(59,130,246,0.7)] z-10' />
 
-      {/* Card */}
-      <div className='bg-gray-900 p-5 rounded-xl border border-gray-800/50 hover:border-blue-500/30 shadow-md hover:-translate-y-1 hover:shadow-blue-500/10 transition-all duration-300'>
-        <div className='flex items-start gap-3'>
-          <span className='text-2xl mt-0.5 flex-shrink-0'>{item.icon}</span>
+      {/* Glass Card */}
+      <div className='glass-card glass-card-hover p-6 rounded-2xl border-blue-500/20 bg-blue-500/5 backdrop-blur-xl'>
+        <div className='flex items-start gap-4'>
+          <span className='text-3xl flex-shrink-0'>{item.icon}</span>
           <div>
-            <h4 className='text-base font-bold text-gray-100 leading-snug'>
+            <h4 className='text-base sm:text-lg font-bold font-heading text-white leading-snug'>
               {isEdu ? item.degree : item.role}
             </h4>
-            <p className='text-blue-400 font-medium text-sm mt-0.5'>
+            <p className='text-cyan-400 font-medium text-sm sm:text-base mt-1'>
               {isEdu ? item.institution : item.company}
             </p>
-            <span className='inline-block mt-1.5 mb-2 text-xs bg-blue-500/15 text-blue-300 border border-blue-500/25 px-2.5 py-0.5 rounded-full'>
+            <span className='inline-block mt-2 mb-3 text-xs glass-card border-blue-500/30 text-blue-300 px-3 py-1 rounded-full font-medium'>
               {item.year}
             </span>
             <p className='text-gray-400 text-sm leading-relaxed'>{item.description}</p>
@@ -74,29 +74,31 @@ const Education = () => {
   const [titleRef, titleVisible] = useInView();
 
   return (
-    <section id='education' className='bg-gray-950 py-20 px-6 relative overflow-hidden'>
+    <section id='education' className='section-padding bg-[#0a0a0f] relative overflow-hidden'>
 
       {/* Ambient glow */}
-      <div className="absolute left-0 bottom-0 w-72 h-72 bg-purple-600/5 rounded-full filter blur-[80px] pointer-events-none" />
-      <div className="absolute right-0 top-20 w-64 h-64 bg-blue-600/5 rounded-full filter blur-[80px] pointer-events-none" />
+      <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-purple-600/8 rounded-full filter blur-[100px] pointer-events-none animate-glow-pulse" />
+      <div className="absolute right-0 top-20 w-[500px] h-[500px] bg-blue-600/8 rounded-full filter blur-[100px] pointer-events-none animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
 
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-6xl mx-auto px-6'>
 
         {/* Section heading */}
         <div
           ref={titleRef}
-          className={`text-center mb-14 ${titleVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
+          className={`text-center mb-16 ${titleVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
         >
-          <h2 className='text-4xl md:text-5xl font-extrabold text-white mb-4'>Education & Experience</h2>
-          <div className='w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full' />
+          <h2 className='text-4xl sm:text-5xl md:text-6xl font-extrabold font-heading text-white mb-4'>
+            Education & <span className="gradient-text">Experience</span>
+          </h2>
+          <div className='w-24 h-1.5 bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-500 mx-auto rounded-full' />
         </div>
 
-        <div className='grid md:grid-cols-2 gap-8 md:gap-16'>
+        <div className='grid md:grid-cols-2 gap-10 md:gap-16'>
 
           {/* Education column */}
           <div>
-            <h3 className='text-xl font-semibold text-gray-200 mb-6 flex items-center gap-2.5'>
-              <span className='w-8 h-8 bg-blue-500/15 rounded-lg flex items-center justify-center'>🎓</span>
+            <h3 className='text-xl sm:text-2xl font-semibold font-heading text-white mb-7 flex items-center gap-3'>
+              <span className='w-10 h-10 glass-card border-blue-500/30 bg-blue-500/10 rounded-xl flex items-center justify-center text-xl'>🎓</span>
               Education
             </h3>
             <div className='timeline-line pl-5'>
@@ -108,8 +110,8 @@ const Education = () => {
 
           {/* Experience column */}
           <div>
-            <h3 className='text-xl font-semibold text-gray-200 mb-6 flex items-center gap-2.5'>
-              <span className='w-8 h-8 bg-purple-500/15 rounded-lg flex items-center justify-center'>💼</span>
+            <h3 className='text-xl sm:text-2xl font-semibold font-heading text-white mb-7 flex items-center gap-3'>
+              <span className='w-10 h-10 glass-card border-purple-500/30 bg-purple-500/10 rounded-xl flex items-center justify-center text-xl'>💼</span>
               Experience
             </h3>
             <div className='timeline-line pl-5'>
